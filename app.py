@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
 
-@app.route("/perform_query")
+@app.route("/perform_query", methods=['GET'])
 def perform_query():
     # получить параметры query и file_name из request.args, при ошибке вернуть ошибку 400
     # проверить, что файла file_name существует в папке DATA_DIR, при ошибке вернуть ошибку 400
